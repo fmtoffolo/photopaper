@@ -50,6 +50,7 @@ body{
 	margin-left: 5%;
 	display: inline-block;
 	max-width: 15%;
+	max-height: 10%;
 	overflow: hidden;
 	vertical-align: middle;
 	border-radius: 50%;
