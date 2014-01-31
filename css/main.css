@@ -1,0 +1,61 @@
+body{
+	margin:0px;
+	padding: 0px;
+}
+
+.photo{
+	height: 100%;
+	background-image: url('fondo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	-webkit-transition:background-position 3s ease;
+}
+
+.center{
+	background-position: 50%;
+}
+
+.moveLeft{
+	background-position: 100%;
+}
+
+.moveRight{
+	background-position: 0%;
+}
+
+.caption{
+	background: rgba(0,0,0,0.5);
+	bottom: 0px;
+	position: absolute;
+	width: 100%;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	-webkit-transition: opacity 1.5s ease;
+/*	opacity: 0.5;
+
+*/}
+
+.caption p {
+	color: white;
+	font-family: helvetica;
+	font-size: 0.75em;
+	display: inline-block;
+	line-height: 100%;
+	overflow: hidden;
+	vertical-align: middle;
+	padding-left: 5%;
+}
+
+.caption .profile{
+	margin-left: 5%;
+	display: inline-block;
+	max-width: 15%;
+	overflow: hidden;
+	vertical-align: middle;
+	border-radius: 50%;
+	border: solid 1px grey;
+}
+
+.fadeOut{
+	opacity: 0;
+}
