@@ -5,21 +5,29 @@ body{
 
 .photo{
 	height: 100%;
-	background-image: url('fondo.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	-webkit-transition:background-position 3s ease;
 }
 
 .center{
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
 	background-position: 50%;
 }
 
 .moveLeft{
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
 	background-position: 100%;
 }
 
 .moveRight{
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
 	background-position: 0%;
 }
 

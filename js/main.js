@@ -10,7 +10,7 @@ photo.style.backgroundImage = 'url("img/' + photoList[Math.floor(Math.random()*p
 
 function handleMotion(data){
 	var orientation = {x : data.gamma + 90, y : data.beta - 90, z : data.alpha};
-	// photo.innerHTML = orientation.x;
+
 	if (orientation.x > 100) {
 		caption.classList.add('fadeOut');
 		photo.classList.remove('moveRight', 'center');
