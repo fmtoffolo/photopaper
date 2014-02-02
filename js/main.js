@@ -16,16 +16,19 @@ function handleMotion(data){
 		photo.classList.remove('moveRight', 'center');
 		photo.classList.add('moveLeft');
 		text.innerHTML = photo.classList;
+		console.log(photo.classList);
 	}else if(orientation.x < 80) {
 		caption.classList.add('fadeOut');
 		photo.classList.remove('moveLeft', 'center');
 		photo.classList.add('moveRight');
 		text.innerHTML = photo.classList;
+		console.log(photo.classList);
 	}else{
 		caption.classList.remove('fadeOut');
 		photo.classList.remove('moveRight', 'moveLeft');
 		photo.classList.add('center');
 		text.innerHTML = photo.classList;
+		console.log(photo.classList);
 	};
 }
 
