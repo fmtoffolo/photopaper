@@ -9,7 +9,7 @@ Use it:
 
 Create a new instance of PhotoPaper
 
-var photo = new PhotoPaper({});
+var photo = new PhotoPaper();
 
 The constructor is expecting a object. You can pass:
 imageUrl: expects an url
