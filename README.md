@@ -18,3 +18,6 @@ profilePic: expects an url
 
 If they are missing they default to some assets included in the repository.
 
+
+You can try out a demo here
+http://fmtoffolo.github.io/photopaper
