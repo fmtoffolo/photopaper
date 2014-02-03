@@ -1,14 +1,14 @@
 (function(){
 
-var photo = document.getElementsByClassName('photo')[0],
+var photo = document.getElementsByClassName('picture')[0],
 	caption = document.getElementsByClassName('caption')[0],
 	text = document.getElementById('text'),
-	photoList = ['fondo.jpg'];
+	photoList = ['fondo.jpg', 'fondo1.jpg', 'fondo2.jpg', 'fondo3.jpg'];
 
 //Set listener for device orientation.
 window.addEventListener('deviceorientation', handleMotion, true);
 
-photo.style.backgroundImage = 'url("img/' + photoList[Math.floor(Math.random()*photoList.length)] + '")' 
+photo.src = 'img/' + photoList[Math.floor(Math.random()*photoList.length)]; 
 
 function handleMotion(data){
 	var orientation = {x : data.gamma + 90, y : data.beta - 90, z : data.alpha};

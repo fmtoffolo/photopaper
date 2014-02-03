@@ -4,31 +4,35 @@ body{
 }
 
 .photo{
-	height: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	-webkit-transition:background-position 3s ease;
+}
+
+.picture{
+	height: 100%;
+	position: absolute;
+	-webkit-transition: all 2s ease;
 }
 
 .center{
 	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
-	background-position: 50%;
+	left: -50%;
 }
 
 .moveLeft{
 	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
-	background-position: 100%;
+	left: -100%;
 }
 
 .moveRight{
 	-webkit-transform: translate3d(0, 0, 0);
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
-	background-position: 0%;
+	left: 0%;
 }
 
 .caption{
@@ -39,9 +43,7 @@ body{
 	padding-top: 2.5%;
 	padding-bottom: 2.5%;
 	-webkit-transition: opacity 1.5s ease;
-/*	opacity: 0.5;
-
-*/}
+}
 
 .caption p {
 	color: white;
