@@ -1,3 +1,5 @@
+(function(){
+
 var photo = document.getElementsByClassName('photo')[0],
 	caption = document.getElementsByClassName('caption')[0],
 	text = document.getElementById('text'),
@@ -32,3 +34,4 @@ function handleMotion(data){
 	};
 }
 
+})();
