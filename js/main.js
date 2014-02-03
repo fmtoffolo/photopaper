@@ -3,7 +3,7 @@
 var photo = document.getElementsByClassName('picture')[0],
 	caption = document.getElementsByClassName('caption')[0],
 	text = document.getElementById('text'),
-	photoList = ['fondo.jpg', 'fondo1.jpg', 'fondo2.jpg', 'fondo3.jpg'];
+	photoList = ['fondo.jpg', 'fondo2.jpg', 'fondo3.jpg', 'fondo4.jpg'];
 
 //Set listener for device orientation.
 window.addEventListener('deviceorientation', handleMotion, true);
