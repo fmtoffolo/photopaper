@@ -1,15 +1,17 @@
 var PhotoPaper = function(config){
 
-	var photoContainer,
+	var config = config || {},
+		photoContainer,
 		image,
-		caption, 
+		caption,
+		pxCenter,
+		pxLeft,
+		pxRight, 
 		profile, 
 		text,
-		imageUrl = config.url || 'img/fondo3.jpg',
+		imageUrl = config.url || 'img/fondo2.jpg',
 		captionText = config.text || 'PhotoPaper demo',
 		profilePic = config.profilePic || 'img/profile.jpg';
-
-	
 
 	var render = function(){
 		photoContainer = document.createElement('div');
@@ -27,6 +29,13 @@ var PhotoPaper = function(config){
 		image.src = imageUrl;
 		profile.src = profilePic;
 		text.innerHTML = captionText;
+		image.addEventListener('load', function(){
+			console.log(image.width);
+			pxCenter = -(image.width/2) + (screen.width/2);
+			pxLeft = -(image.width) + (screen.width);
+			pxRight = 0;
+			console.log(pxLeft);
+		});
 
 		//Set listener for device orientation.
 		window.addEventListener('deviceorientation', handleMotion, true);
@@ -39,20 +48,20 @@ var PhotoPaper = function(config){
 		if (orientation.x > 100) {
 			caption.classList.add('fadeOut');
 			image.classList.remove('moveRight', 'center');
-			image.classList.add('moveLeft');
-			// text.innerHTML = image.classList;
+			image.style.webkitTransform = 'translateX('+pxLeft+'px)';
+
 
 		}else if(orientation.x < 80) {
 			caption.classList.add('fadeOut');
-			image.classList.remove('moveLeft', 'center');
-			image.classList.add('moveRight');
-			// text.innerHTML = image.classList;
+
+			image.style.webkitTransform = 'translateX('+pxRight+'px)';
+
 
 		}else{
 			caption.classList.remove('fadeOut');
-			image.classList.remove('moveRight', 'moveLeft');
-			image.classList.add('center');
-			// text.innerHTML = image.classList;
+
+			image.style.webkitTransform = 'translateX('+pxCenter+'px)';
+
 
 		};
 	}
@@ -61,4 +70,4 @@ var PhotoPaper = function(config){
 
 };
 
-var photo = new PhotoPaper({});
+var photo = new PhotoPaper();

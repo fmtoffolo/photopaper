@@ -16,35 +16,12 @@ body{
 .picture{
 	height: 100%;
 	position: absolute;
-	-webkit-transition: all 2s ;
+	-webkit-transition: all 2s;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
 }
 
-.center{
-	-webkit-transform: translate3d(0, 0, 0);
-	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
-	-webkit-transform: translateX(-25%);
-
-/*	left: -50%;
-*/}
-
-.moveLeft{
-	-webkit-transform: translate3d(0, 0, 0);
-	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
-	-webkit-transform: translateX(-50%);
-
-/*	left: -100%;
-*/}
-
-.moveRight{
-	-webkit-transform: translate3d(0, 0, 0);
-	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
-	-webkit-transform: translateX(0%);
-
-/*	left: 0%;
-*/}
 
 .caption{
 	background: rgba(0,0,0,0.5);
