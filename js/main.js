@@ -14,22 +14,28 @@ var PhotoPaper = function(config){
 		profilePic = config.profilePic || 'img/profile.jpg';
 
 	var render = function(){
+		//create all new elements
 		photoContainer = document.createElement('div');
-		image = document.createElement('img');
+		image = new Image();
 		caption = document.createElement('div');
 		profile = document.createElement('img');
 		text = document.createElement('p');
 
+		//add elements to the body 
 		document.body.appendChild(photoContainer).setAttribute('id', 'photoContainer');
 		photoContainer.appendChild(image).classList.add('picture');
-		photoContainer.appendChild(caption).classList.add('caption');
-		caption.appendChild(profile).classList.add('profile');
-		caption.appendChild(text);
+		
 
 		image.src = imageUrl;
 		profile.src = profilePic;
 		text.innerHTML = captionText;
 		image.addEventListener('load', function(){
+			//load everything once image is loaded
+			photoContainer.appendChild(caption).classList.add('caption');
+			caption.appendChild(profile).classList.add('profile');
+			caption.appendChild(text);
+
+			//calculate pixel movement and center position
 			console.log(image.width);
 			pxCenter = -(image.width/2) + (screen.width/2);
 			pxLeft = -(image.width) + (screen.width);
